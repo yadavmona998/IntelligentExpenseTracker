@@ -166,13 +166,16 @@ public class MainActivity extends ActionBarActivity {
            while(myiterator.hasNext()) {
                String key=(String)myiterator.next();
                float []month_amt=datamodel.get(key);
+               String heading="       "+key+"\n";
+               result+=heading;
                for(int i=0;i<12;i++)
                {
-                   String s1=months[i]+" : "+String.valueOf(month_amt[i])+" \n";
+                   String s1=months[i]+" :    Rs "+String.valueOf(month_amt[i])+" \n";
                    result+=s1;
                }
 
 
+              result+="\n";
            }
 
 
